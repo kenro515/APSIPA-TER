@@ -20,9 +20,6 @@ def normalizing_JTES(p_text):
 
 
 def tokenizer_mecab(p_text):
-    p_text = m_t.parse(p_text)
-    ret = p_text.strip().split()
-
     cleaner_list = []
     result = m_c.parseToNode(p_text)
     while result:
