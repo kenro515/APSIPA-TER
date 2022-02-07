@@ -1,0 +1,20 @@
+dataset_setting:
+  in_path: "./data/JTES_clean.tsv"
+  max_len: 22
+training_setting:
+  epoch: 300
+  batch_size: 8
+  learning_rate: 1.0e-4
+  warmup_rate: 0.30
+  early_stopping: 20
+plot_acc_curve_setting:
+  acc_curve_x_label: "training samples"
+  acc_curve_y_label: "accuracy"
+  acc_curve_title: "Accuracy curve"
+plot_loss_curve_setting:
+  loss_curve_x_label: "epoch"
+  loss_curve_y_label: "error"
+  loss_curve_title: "Learning curve"
+plot_cm_setting:
+  cm_x_label: '\nPredicted label'
+  cm_y_label: "True label"
