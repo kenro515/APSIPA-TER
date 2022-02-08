@@ -63,8 +63,8 @@ class dataloader_bert(object):
                 encoded_dict = trans_t.encode_plus(
                     row[0],  # raw_norm
                     add_special_tokens=True,
+                    padding='max_length',
                     max_length=self.max_len,
-                    pad_to_max_length=True,
                     truncation=True,
                     return_attention_mask=True,
                     return_tensors='pt'

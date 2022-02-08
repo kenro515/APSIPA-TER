@@ -55,7 +55,7 @@ def train(net, train_iterator, optimizer, criterion):
     return net, train_loss, train_acc
 
 
-def valid(net, valid_iterator, optimizer, criterion):
+def valid(net, valid_iterator, criterion):
     net.eval()
     epoch_loss = 0.0
     epoch_corrects = 0
@@ -183,7 +183,7 @@ if __name__ == "__main__":
                 net, train_iterator, optimizer, criterion)
             print("test phase")
             net, valid_loss, valid_acc, predict_list, target_list = valid(
-                net, valid_iterator, optimizer, criterion)
+                net, valid_iterator, criterion)
 
             scheduler.step()
 
